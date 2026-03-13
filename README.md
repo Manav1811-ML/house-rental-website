@@ -15,7 +15,7 @@ A professional, fully responsive real estate portal built with HTML, CSS, and Ja
 
 ```
 SGP project/
-├── idex.html                 # Homepage (Main landing page)
+├── index.html                 # Homepage (Main landing page)
 ├── properties.html           # Featured properties showcase
 ├── Buyers.html              # Information for property buyers
 ├── Owners.html              # Information for property owners
@@ -45,7 +45,7 @@ SGP project/
 
 ### Navigation Menu (All Pages)
 All pages have a consistent navigation bar with links to:
-- **Dalali.com** (Logo) → idex.html (Home)
+- **Dalali.com** (Logo) → index.html (Home)
 - **For Buyers** → Buyers.html
 - **For Owners** → Owners.html
 - **Properties** → properties.html
@@ -54,7 +54,7 @@ All pages have a consistent navigation bar with links to:
 ### Page Hierarchy
 
 ```
-idex.html (Home)
+index.html (Home)
     ├── News section (links to news pages)
     │   ├── news1.html
     │   ├── news2.html
@@ -173,7 +173,7 @@ feature1.html (Featured Property)
 ## How to Use
 
 ### Opening the Website
-1. Open `idex.html` in any web browser to view the homepage
+1. Open `index.html` in any web browser to view the homepage
 2. Use the navigation menu to visit different pages
 3. All links are properly connected
 

@@ -7,6 +7,9 @@
   <title>Apna Ghar Apna Hota Hai</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="news.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
 
@@ -14,7 +17,7 @@
 <body>
   <header>
       <nav class="navbar">
-        <a href="idex.html" class="logo" style="opacity: 1;"><h1 class="motion">HOUSING.<span>com</span></h1></a>
+        <a href="index.html" class="logo" style="opacity: 1;"><h1 class="motion">Dalali.com<span></span></h1></a>
         <div class="menu">
             <a href="Buyers.html">For Buyers </a>
             <a href="Owners.html">For Owners </a>
@@ -24,37 +27,38 @@
         </div>
       </nav>
   </header>
-  <main>
+  <main class="main-homepage">
     <section class="over">
       <h1>Welcome to our</h1>
-      <h2>HOUSING property</h2>
+      <h2>Housing Properties......</h2>
     </section>
   </main>
-  <div class="image"  >
-    <img src="Index pic.jpg" style="opacity: 0.4;" >
-  </div>
+  <!-- Image now used as background in main section -->
+  <!-- <div class="image">
+    <img src="images/Index pic.jpg" style="width: 100%; height: 500px; object-fit: cover;">
+  </div> -->
 
-
-  <div>
-    <img src="indexss.png">
+  <div style="background: var(--light-bg); padding: 2rem; text-align: center;">
+    <h2 style="color: var(--primary-color); margin-bottom: 1rem; font-size: 2rem;">Find Your Perfect Home</h2>
+    <p style="color: var(--light-text); font-size: 1.1rem;">Browse our latest listings and discover your dream property</p>
   </div>
 
   <section class="service">
         <h1 class="heading"> News & Updates </h1>
         <div class="box-container">
             <div class="box">
-                <img src="news.jpg" class="img_news1">
-                <p>All You Need To Know About Godrej Emerald Thane West</p>
+                <img src="images/news.jpg" class="img_news1" style="object-fit: cover;">
+                <p>Luxury Apartments - Build Your Future Today</p>
                 <a href="news1.html" class="btn3" >learn more</a>
             </div>
             <div class="box">
-                <img src="news1.jpg" class="img_news2">
-                <p>All You Need To Know About Diya Green City, Raj Nagar Extension</p>
+                <img src="images/news1.jpg" class="img_news2" style="object-fit: cover;">
+                <p>Premium Properties - Perfect for Modern Living</p>
                 <a href="news2.html" class="btn3" >learn more</a>
             </div>
             <div class="box">
-                <img src="news2.jpg" class="img_news3">
-                <p>All You Need To know About all New Insurance Policy.</p>
+                <img src="images/news2.jpg" class="img_news3" style="object-fit: cover;">
+                <p>Smart Investment - Property Buying Guide 2024</p>
                 <a href="news3.html" class="btn3" >learn more</a>
             </div>
         </div>
@@ -66,31 +70,33 @@
     <div class="container">
         <div class="row">
             <div class="footer-col">
-                <h4>company</h4>
+                <h4>Company</h4>
                 <ul>
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">our services</a></li>
-                    <li><a href="#">privacy policy</a></li>
-                    <li><a href="#">affiliate program</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>get help</h4>
+                <h4>Support</h4>
                 <ul>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">shipping</a></li>
-                    <li><a href="#">returns</a></li>
-                    <li><a href="#">order status</a></li>
-                    <li><a href="#">payment options</a></li>
+                    <li><a href="#">How It Works</a></li>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Safety Guidelines</a></li>
                 </ul>
             </div>
             <div class="footer-col">
-                <h4>online shop</h4>
+                <h4>Explore</h4>
                 <ul>
-                    <li><a href="#">watch</a></li>
-                    <li><a href="#">bag</a></li>
-                    <li><a href="#">shoes</a></li>
-                    <li><a href="#">dress</a></li>
+                    <li><a href="Buyers.html">Buy Property</a></li>
+                    <li><a href="#">Rent Property</a></li>
+                    <li><a href="#">Commercial Spaces</a></li>
+                    <li><a href="#">Luxury Homes</a></li>
+                    <li><a href="#">New Projects</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -105,6 +111,7 @@
         </div>
     </div>
 </footer>
-  
+
+<script src="main.js"></script>
 </body>
 </html>
