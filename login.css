@@ -1,0 +1,266 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+} 
+
+body {
+    width: 100%;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #1a252f 100%);
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin-top: 0;
+}
+
+.main-form{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+form {
+    color: #2c3e50;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+#heading {
+    font-weight: 700;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+.input-main{
+    justify-content: center;
+    width: 100%;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.note{
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    color: #7f8c8d;
+}
+
+.label{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.label span:hover{
+    cursor: pointer;
+}
+
+.input-box {
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    border: 2px solid #ecf0f1;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    font-family: inherit;
+}
+
+.input-box:focus {
+    border-color: #3498db;
+    background: white;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.2);
+}
+
+.input-box::placeholder {
+    color: #bdc3c7;
+}
+
+.fp{
+    text-decoration: none;
+    color: #3498db;
+    text-align: right;
+    display: block;
+    margin: -1rem 0 1rem 0;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.fp:hover{
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+.term {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.term input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #3498db;
+}
+
+.term span {
+    cursor: pointer;
+}
+
+.signup-btn {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin: 1.5rem 0 0 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.signup-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+}
+
+.signup-btn:active {
+    transform: translateY(-1px);
+}
+
+.log_in{
+    text-decoration: none;
+    color: #3498db;
+    margin-left: 0.3rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.log_in:hover{
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+hr {
+    margin: 1.5rem 0;
+    border: none;
+    border-top: 2px solid #ecf0f1;
+}
+
+.or {
+    margin: 1rem 0;
+    text-align: center;
+    color: #7f8c8d;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.log_in-main{
+    margin: 1.5rem 0;
+    text-align: center;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.login_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.login_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 2rem;
+        max-width: 90%;
+    }
+
+    #heading {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .input {
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+        max-width: 95%;
+    }
+
+    #heading {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    .input-box {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    .signup-btn {
+        padding: 0.9rem;
+        font-size: 1rem;
+    }
+}

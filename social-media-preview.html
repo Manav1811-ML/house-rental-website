@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Colors Preview - Dalali.com</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .preview-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .preview-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      color: #2c3e50;
+    }
+
+    .preview-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .preview-header p {
+      font-size: 1.1rem;
+      color: #7f8c8d;
+    }
+
+    .preview-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .preview-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .preview-box h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .preview-box .color-code {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .color-swatch {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .instagram-color { background: linear-gradient(135deg, #E4405F 0%, #ED4956 100%); }
+    .linkedin-color { background: linear-gradient(135deg, #0077B5 0%, #004782 100%); }
+    .facebook-color { background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%); }
+    .twitter-color { background: linear-gradient(135deg, #1DA1F2 0%, #1A8CD8 100%); }
+
+    .preview-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .icon-demo {
+      text-align: center;
+    }
+
+    .icon-demo p {
+      font-size: 0.9rem;
+      color: #7f8c8d;
+      margin-top: 0.5rem;
+    }
+
+    /* Demo footer styling */
+    .demo-footer {
+      background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      margin-bottom: 3rem;
+    }
+
+    .demo-footer h2 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .demo-footer .social-links {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .demo-footer .social-links a {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      font-size: 1.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Instagram */
+    .demo-footer .social-links a:has(.fa-instagram) {
+      background: rgba(228, 64, 95, 0.1);
+      border-color: rgba(228, 64, 95, 0.3);
+    }
+
+    .demo-footer .social-links a:has(.fa-instagram):hover {
+      background: linear-gradient(135deg, #E4405F 0%, #ED4956 100%);
+      border-color: #E4405F;
+      color: white;
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(228, 64, 95, 0.4);
+    }
+
+    /* LinkedIn */
+    .demo-footer .social-links a:has(.fa-linkedin-in) {
+      background: rgba(0, 119, 181, 0.1);
+      border-color: rgba(0, 119, 181, 0.3);
+    }
+
+    .demo-footer .social-links a:has(.fa-linkedin-in):hover {
+      background: linear-gradient(135deg, #0077B5 0%, #004782 100%);
+      border-color: #0077B5;
+      color: white;
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(0, 119, 181, 0.4);
+    }
+
+    /* Facebook */
+    .demo-footer .social-links a:has(.fa-facebook-f) {
+      background: rgba(24, 119, 242, 0.1);
+      border-color: rgba(24, 119, 242, 0.3);
+    }
+
+    .demo-footer .social-links a:has(.fa-facebook-f):hover {
+      background: linear-gradient(135deg, #1877F2 0%, #0A66C2 100%);
+      border-color: #1877F2;
+      color: white;
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
+    }
+
+    /* Twitter */
+    .demo-footer .social-links a:has(.fa-twitter) {
+      background: rgba(29, 161, 242, 0.1);
+      border-color: rgba(29, 161, 242, 0.3);
+    }
+
+    .demo-footer .social-links a:has(.fa-twitter):hover {
+      background: linear-gradient(135deg, #1DA1F2 0%, #1A8CD8 100%);
+      border-color: #1DA1F2;
+      color: white;
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(29, 161, 242, 0.4);
+    }
+
+    .demo-footer p {
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    .instructions {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      margin-top: 3rem;
+    }
+
+    .instructions h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .instructions ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .instructions li {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #ecf0f1;
+      color: #555;
+    }
+
+    .instructions li:before {
+      content: "✓ ";
+      color: #3498db;
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+
+    .instructions li:last-child {
+      border-bottom: none;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      color: #2980b9;
+      transform: translateX(-5px);
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-container">
+    <a href="idex.html" class="back-link">← Back to Dalali.com</a>
+
+    <div class="preview-header">
+      <h1>🎨 Social Media Colors Preview</h1>
+      <p>Hover over the icons below to see the platform-specific brand colors in action!</p>
+    </div>
+
+    <!-- Main Demo Footer -->
+    <div class="demo-footer">
+      <h2>Follow Us On Social Media</h2>
+      <div class="social-links">
+        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>👆 Try hovering over each icon to see the smooth color transitions!</p>
+    </div>
+
+    <!-- Color Details -->
+    <div class="preview-sections">
+      <!-- Instagram -->
+      <div class="preview-box">
+        <h2>📸 Instagram</h2>
+        <div class="color-code">
+          <div class="color-swatch instagram-color">#E4405F → #ED4956</div>
+        </div>
+        <p><strong>Brand Color:</strong> Pink/Rose</p>
+        <p><strong>Effect:</strong> Smooth gradient with lift & glow</p>
+        <div class="preview-icons">
+          <div class="icon-demo">
+            <a href="#" style="width: 50px; height: 50px; background: rgba(228, 64, 95, 0.1); border: 2px solid rgba(228, 64, 95, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #E4405F; font-size: 1.5rem; text-decoration: none;"><i class="fab fa-instagram"></i></a>
+            <p>Hover me!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="preview-box">
+        <h2>💼 LinkedIn</h2>
+        <div class="color-code">
+          <div class="color-swatch linkedin-color">#0077B5 → #004782</div>
+        </div>
+        <p><strong>Brand Color:</strong> Professional Blue</p>
+        <p><strong>Effect:</strong> Smooth gradient with lift & glow</p>
+        <div class="preview-icons">
+          <div class="icon-demo">
+            <a href="#" style="width: 50px; height: 50px; background: rgba(0, 119, 181, 0.1); border: 2px solid rgba(0, 119, 181, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0077B5; font-size: 1.5rem; text-decoration: none;"><i class="fab fa-linkedin-in"></i></a>
+            <p>Hover me!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Facebook -->
+      <div class="preview-box">
+        <h2>👍 Facebook</h2>
+        <div class="color-code">
+          <div class="color-swatch facebook-color">#1877F2 → #0A66C2</div>
+        </div>
+        <p><strong>Brand Color:</strong> Bright Blue</p>
+        <p><strong>Effect:</strong> Smooth gradient with lift & glow</p>
+        <div class="preview-icons">
+          <div class="icon-demo">
+            <a href="#" style="width: 50px; height: 50px; background: rgba(24, 119, 242, 0.1); border: 2px solid rgba(24, 119, 242, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1877F2; font-size: 1.5rem; text-decoration: none;"><i class="fab fa-facebook-f"></i></a>
+            <p>Hover me!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Twitter -->
+      <div class="preview-box">
+        <h2>🐦 Twitter</h2>
+        <div class="color-code">
+          <div class="color-swatch twitter-color">#1DA1F2 → #1A8CD8</div>
+        </div>
+        <p><strong>Brand Color:</strong> Sky Blue</p>
+        <p><strong>Effect:</strong> Smooth gradient with lift & glow</p>
+        <div class="preview-icons">
+          <div class="icon-demo">
+            <a href="#" style="width: 50px; height: 50px; background: rgba(29, 161, 242, 0.1); border: 2px solid rgba(29, 161, 242, 0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #1DA1F2; font-size: 1.5rem; text-decoration: none;"><i class="fab fa-twitter"></i></a>
+            <p>Hover me!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <h2>✨ Features Implemented</h2>
+      <ul>
+        <li>Each platform has its official brand color</li>
+        <li>Smooth 0.4s gradient transitions on hover</li>
+        <li>Icons lift up 8px and scale to 1.1x</li>
+        <li>Glowing shadow effect with platform color</li>
+        <li>Applied to all 10 pages of Dalali.com</li>
+        <li>Responsive on desktop, tablet, and mobile</li>
+        <li>Touch-friendly on all devices</li>
+        <li>Professional and modern appearance</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
